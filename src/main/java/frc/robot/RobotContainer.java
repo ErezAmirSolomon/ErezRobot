@@ -6,6 +6,7 @@ package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.Constants.StorageConstants;
+import frc.robot.commands.RotateUntilLimit;
 import frc.robot.subsystems.MecanumDriveTrain;
 import frc.robot.subsystems.Storage;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -21,6 +22,7 @@ public class RobotContainer {
   private final CommandXboxController m_driverController = new CommandXboxController(
       OperatorConstants.kDriverControllerPort);
 
+  private RotateUntilLimit m_RotateUntilLimit = new RotateUntilLimit(m_Storage);
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
    */
