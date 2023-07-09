@@ -37,8 +37,7 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-    m_driverController.x()
-        .whileTrue(new RunCommand(() -> m_Storage.setMotorSpeed(StorageConstants.kMotorSpeed), m_Storage));
+    m_driverController.x().onTrue(m_RotateUntilLimit);
   }
 
   /**
