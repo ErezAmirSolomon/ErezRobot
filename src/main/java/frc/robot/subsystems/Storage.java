@@ -12,18 +12,18 @@ import frc.robot.Constants.StorageConstants;
 public class Storage extends SubsystemBase {
   private VictorSP m_storageMotorController;
 
-  private DigitalInput m_limitswitch;
+  private DigitalInput m_limitSwitch;
 
 
   /** Creates a new Storage. */
   public Storage() {
     m_storageMotorController = new VictorSP(StorageConstants.kStorageMotorControllerPort);
 
-    m_limitswitch = new DigitalInput(StorageConstants.kLimitSwitchPort);
+    m_limitSwitch = new DigitalInput(StorageConstants.kLimitSwitchPort);
   }
 
-  public void getLimitSwitchValue() {
-    m_limitswitch.get();
+  public boolean getLimitSwitchValue() {
+    return m_limitSwitch.get();
   }
 
   public void setMotorSpeed(double motorSpeed) {
