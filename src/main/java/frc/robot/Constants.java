@@ -29,4 +29,7 @@ public final class Constants {
     public static final int kLimitSwitchPort = 0;
     public static final double kMotorSpeed = 0.3;
   }
+  public static class ShooterConstants {
+    public static final int kShooterMotorControllerPort = 0;
+  }
 }
