@@ -22,12 +22,12 @@ public class Storage extends SubsystemBase {
     m_limitSwitch = new DigitalInput(StorageConstants.kLimitSwitchPort);
   }
 
-  public boolean getLimitSwitchValue() {
-    return m_limitSwitch.get();
-  }
-
   public void setMotorSpeed(double motorSpeed) {
     m_storageMotorController.set(motorSpeed);
+  }
+
+  public boolean getLimitSwitchValue() {
+    return m_limitSwitch.get();
   }
 
   @Override
