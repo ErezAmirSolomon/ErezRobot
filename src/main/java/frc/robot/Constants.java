@@ -32,5 +32,8 @@ public final class Constants {
   public static class ShooterConstants {
     public static final int kShooterMotorControllerPort = 0;
     public static final int kShooterMotorControllerSpeed = 690;
+    public static final int kEncoderPortA = 0;
+    public static final int kEncoderPortB = 1;
+    public static final int kEncoderResolution = 80085;
   }
 }
